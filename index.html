@@ -34,18 +34,6 @@
       margin: 0 auto;
     }
 
-    /* Gallery */
-    .photos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .photos img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
     /* Seating chart */
     .seating img {
       max-width: 100%;
@@ -53,7 +41,22 @@
       margin-top: 20px;
     }
 
-    /* Timeline (refined) */
+    /* Gallery — fixed 3 images side-by-side */
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .photos img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Timeline */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -95,27 +98,6 @@
       margin: 0 auto;
     }
 
-    /* Upload button */
-    .upload-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 20px 0;
-      padding: 14px 26px;
-      background: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 999px;
-      font-size: 1.1em;
-      letter-spacing: 0.5px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .upload-btn:hover {
-      background: #555;
-      transform: translateY(-2px);
-    }
-
     footer {
       padding: 30px;
       background: #fff;
@@ -136,6 +118,32 @@
     <h2>Bienvenue / ようこそ</h2>
     <p>Merci de vous joindre à nous pour cette journée.</p>
     <p>この特別な日を、皆さまと京都で一緒に迎えられることをとても嬉しく思います。</p>
+  </section>
+
+  <section>
+    <h2>当日の流れ</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">11:00</div>
+        <p>挙式</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">12:10</div>
+        <p>披露宴</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">12:30</div>
+        <p>お食事</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">14:45</div>
+        <p>お開き</p>
+      </div>
+    </div>
   </section>
 
   <section class="seating">
@@ -182,7 +190,7 @@
 
       <div class="timeline-item">
         <div class="timeline-year">2024</div>
-        <p>真緒は日本へ、ルイはフランスへ。<br>遠距離になってしまう前に、2人でアジアを少し旅しました</p>
+        <p>真緒は日本へ、ルイはフランスへ。<br>遠距離になる前に2人でアジアを旅しました</p>
         <img src="photos/timeline/2024.jpg" alt="2024">
       </div>
 
@@ -193,13 +201,6 @@
       </div>
 
     </div>
-  </section>
-
-  <section>
-    <h2>Partagez vos photos</h2>
-    <a class="upload-btn" href="https://photos.google.com/share/YOUR_SHARED_ALBUM_LINK" target="_blank">
-      📸 Upload your photos
-    </a>
   </section>
 
   <footer>
